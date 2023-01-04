@@ -8,6 +8,9 @@ def print_solutions(solutions):
 def solve_equation(n):
     solutions = [(1, 1, 1, 1)]
 
+    if n == 2:
+        return solutions
+
     divisors = get_divisors(n)
     divisors.pop()
 
