@@ -4,6 +4,9 @@ from math import log2, gcd
 def solve_equation(n):
     solutions = [(1, 1, 1, 1)]
 
+    if n == 2:
+        return solutions
+
     divisors = get_divisors(n)
     divisors.pop()
 
