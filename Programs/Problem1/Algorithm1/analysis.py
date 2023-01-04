@@ -27,7 +27,7 @@ def solve_equation(n):
 if __name__ == "__main__":
 
     n = 10
-    trials = 10**8
+    trials = 10**7
     
     total_time = 0
     total_time_squared = 0
