@@ -15,17 +15,16 @@ def solve_equation(n):
     divisors.pop()
 
     for d in divisors:
-        otherd = n//d
+        other_d = n//d
 
-        solutions.append((n-d, otherd-1, n-d, otherd))
+        solutions.append((n-d, other_d-1, n-d, other_d))
 
-        for k in range(2, min(int(log2(n)) + 1, otherd)):
-            if gcd(otherd, k) == 1:
-                power = n - k*d
-                ret = perfect_power(power, [k])
+        for k in range(2, min(int(log2(n)) + 1, other_d)):
+            if gcd(other_d, k) == 1:
+                ret = perfect_power(n - k*d, [k])
 
                 if ret:
-                    solutions.append((ret[0], otherd - k, ret[0], otherd))
+                    solutions.append((ret[0], other_d - k, ret[0], other_d))
     
     return solutions
 
