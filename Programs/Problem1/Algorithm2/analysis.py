@@ -46,7 +46,7 @@ if __name__ == "__main__":
         total_time_squared += time**2
 
     mean_time = total_time/trials
-    standard_deviation = (total_time_squared/trials - mean_time**2)**0.5
+    standard_deviation = ((total_time_squared - trials * mean_time**2)/(trials - 1))**0.5
     
     print(f"mean = {round(mean_time)} ns")
     print(f"standard deviation = {round(standard_deviation)} ns")
