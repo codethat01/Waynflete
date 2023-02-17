@@ -45,7 +45,6 @@ def mergesort(array):
         index += 1
 
         
-        
 if __name__ == "__main__":
 
     n = 10
