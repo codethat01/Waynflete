@@ -12,49 +12,39 @@ def bubblesort(array):
                 array[index], array[index+1] = array[index+1], array[index]
                 swapped = True
 
-class mergesort:
-    @staticmethod
-    def __merge(array, array1, array2):
-        index, index1, index2 = 0, 0, 0
-        length = len(array)
+def mergesort(array):
+    length = len(array)
 
-        maximum = max(array1[-1], array2[-1]) + 1
-        array1.append(maximum)
-        array2.append(maximum)
+    if length == 1:
+        return array
 
-        while index < length:
-            v1, v2 = array1[index1], array2[index2]
+    mid = length//2
+    array1 = array[:mid]
+    array2 = array[mid:]
 
-            if v1 < v2:
-                array[index] = v1
-                index1 += 1
-            else:
-                array[index] = v2
-                index2 += 1
+    mergesort(array1)
+    mergesort(array2)
+    
+    index, index1, index2 = 0, 0, 0
+    length = len(array)
 
-            index += 1
+    maximum = max(array1[-1], array2[-1]) + 1
+    array1.append(maximum)
+    array2.append(maximum)
 
+    while index < length:
+        v1, v2 = array1[index1], array2[index2]
 
-    @staticmethod
-    def __sort(array):
-        length = len(array)
+        if v1 < v2:
+            array[index] = v1
+            index1 += 1
+        else:
+            array[index] = v2
+            index2 += 1
 
-        if length == 1:
-            return array
+        index += 1
 
-        mid = length//2
-        array1 = array[:mid]
-        array2 = array[mid:]
-
-        mergesort.__sort(array1)
-        mergesort.__sort(array2)
-        mergesort.__merge(array, array1, array2)
-
-
-    def __init__(self, array):
-        mergesort.__sort(array)
-
-
+        
         
 if __name__ == "__main__":
 
