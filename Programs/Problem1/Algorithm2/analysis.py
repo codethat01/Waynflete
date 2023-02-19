@@ -22,7 +22,8 @@ def solve_equation(n):
                 ret = perfect_power(n - y*d, [y])
 
                 if ret:
-                    solutions.append((ret[0], x - y, ret[0], x))
+                    z = ret[0]
+                    solutions.append((z, x - y, z, x))
     
     return solutions
 
