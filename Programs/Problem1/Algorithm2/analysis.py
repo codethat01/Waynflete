@@ -13,16 +13,16 @@ def solve_equation(n):
     divisors.pop()
 
     for d in divisors:
-        other_d = n//d
+        x = n//d
 
-        solutions.append((n-d, other_d-1, n-d, other_d))
+        solutions.append((n-d, x-1, n-d, x))
 
-        for k in range(2, min(int(log2(n)) + 1, other_d)):
-            if gcd(other_d, k) == 1:
-                ret = perfect_power(n - k*d, [k])
+        for y in range(2, min(int(log2(n)) + 1, x)):
+            if gcd(x, y) == 1:
+                ret = perfect_power(n - y*d, [y])
 
                 if ret:
-                    solutions.append((ret[0], other_d - k, ret[0], other_d))
+                    solutions.append((ret[0], x - y, ret[0], x))
     
     return solutions
 
@@ -30,7 +30,7 @@ def solve_equation(n):
 if __name__ == "__main__":
 
     nmin, nmax = 2, 10
-    trials = 10**7
+    trials = 10**4
     
     total_time = 0
     total_time_squared = 0
