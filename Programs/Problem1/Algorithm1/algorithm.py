@@ -6,8 +6,8 @@ def solve_equation(n):
 
     for m in range(2, n-1):
         if m % (n-m) == 0:
-            power = m//(n-m)
-            solutions.append((m, power, m, power+1))
+            x = m//(n-m)
+            solutions.append((m, x, m, x+1))
 
         else:
             hcf = gcd(m, n-m)
@@ -15,8 +15,9 @@ def solve_equation(n):
             ret = perfect_power(m, [y])
 
             if ret:
-                power = m//hcf
-                solutions.append((ret[0], power, ret[0], power+y))
+                x = m//hcf
+                z = ret[0]
+                solutions.append((z, x, z, x+y))
 
     if n != 2:
         solutions.append((n-1, n-1, n-1, n))
