@@ -1,4 +1,5 @@
 from math import gcd
+from sympy import perfect_power
 from time import perf_counter_ns
 
 def solve_equation(n):
@@ -12,16 +13,14 @@ def solve_equation(n):
         else:
             hcf = gcd(m, n-m)
             y = (n-m)//hcf
-            base = round(m**(1/y))
+            ret = perfect_power(m, [y])
 
-            if base**y == m:
+            if ret:
                 power = m//hcf
-                solutions.append((base, power, base, power+y))
+                solutions.append((ret[0], power, ret[0], power+y))
 
     if n != 2:
         solutions.append((n-1, n-1, n-1, n))
-    
-    return solutions
 
         
 if __name__ == "__main__":
