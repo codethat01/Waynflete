@@ -30,7 +30,7 @@ def generate_coefficients(max_n):
 if __name__ == "__main__":
 
     n = 100
-    trials = 10**3
+    trials = 10**2
     
     total_time = 0
     total_time_squared = 0
