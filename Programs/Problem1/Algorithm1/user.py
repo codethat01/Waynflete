@@ -1,10 +1,12 @@
 from math import gcd
 from sympy import perfect_power
 
+
 def print_solutions(solutions):
     for a_base, a_exp, b_base, b_exp in solutions:
         print(f"a = {a_base}^{a_exp}, b = {b_base}^{b_exp}")
 
+        
 def solve_equation(n):
     solutions = [(1, 1, 1, 1)]
 
@@ -27,6 +29,7 @@ def solve_equation(n):
         solutions.append((n-1, n-1, n-1, n))
     
     return solutions
+
 
 
 if __name__ == "__main__":
