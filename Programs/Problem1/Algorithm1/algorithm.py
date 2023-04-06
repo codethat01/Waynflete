@@ -1,6 +1,7 @@
 from math import gcd
 from sympy import perfect_power
 
+
 def solve_equation(n):
     solutions = [(1, 1, 1, 1)]
 
