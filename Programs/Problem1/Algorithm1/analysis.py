@@ -2,6 +2,7 @@ from math import gcd
 from sympy import perfect_power
 from time import perf_counter_ns
 
+
 def solve_equation(n):
     solutions = [(1, 1, 1, 1)]
 
@@ -25,7 +26,8 @@ def solve_equation(n):
     
     return solutions
 
-        
+      
+    
 if __name__ == "__main__":
 
     n = 10
