@@ -1,6 +1,7 @@
 from sympy import perfect_power, divisors as get_divisors
 from math import log2, gcd
 
+
 def solve_equation(n):
     solutions = [(1, 1, 1, 1)]
 
