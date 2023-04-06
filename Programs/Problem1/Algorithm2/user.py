@@ -1,10 +1,12 @@
 from sympy import perfect_power, divisors as get_divisors
 from math import log2, gcd
 
+
 def print_solutions(solutions):
     for a_base, a_exp, b_base, b_exp in solutions:
         print(f"a = {a_base}^{a_exp}, b = {b_base}^{b_exp}")
 
+        
 def solve_equation(n):
     solutions = [(1, 1, 1, 1)]
 
@@ -28,6 +30,7 @@ def solve_equation(n):
                     solutions.append((z, x - y, z, x))
     
     return solutions
+
 
 
 if __name__ == "__main__":
