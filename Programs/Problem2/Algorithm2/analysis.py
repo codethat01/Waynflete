@@ -26,7 +26,7 @@ def generate_coefficients(n):
     
 if __name__ == "__main__":
 
-    n = 100
+    n = 600
     trials = 10**2
     
     total_time = 0
