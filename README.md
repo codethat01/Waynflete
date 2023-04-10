@@ -1,5 +1,6 @@
 # Waynflete 2022-2023
 ## *title*
+### Isaac Eason
 
 All of the programs from my Waynflete can be found on this GitHub page in the required folders. All of the programs are written in Python.
 
