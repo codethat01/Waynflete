@@ -2,7 +2,13 @@
 ## The Application of Mathematics in Analysing Algorithmic Efficiency
 ### by Isaac Eason
 
-In each section's folder, all the programs are listed for each algorithm. There are the following folders available:
+Each algorithm from the paper has two different programs:
+- **user.py**  
+  This program takes an input from the user, and outputs the algorithm's result.
+- **analysis.py**  
+  The analysis program outputs the mean and standard deviation run-time for the algorithm. The input and number of trials can be changed accordingly.
+  
+These are stored in the following folders:
 - Introduction
   - InsertionSort
   - MergeSort
@@ -13,9 +19,3 @@ In each section's folder, all the programs are listed for each algorithm. There 
   - FirstAlgorithm
   - SecondAlgorithm
   - ThirdAlgorithm
-
-Each algorithm has a unique folder with two different programs:
-- **user.py**  
-  The user program allows for an input and will output the algorithm's result.
-- **analysis.py**  
-  The analysis program will output the mean and standard deviation of the run-time for the set inputs and number of trials.
