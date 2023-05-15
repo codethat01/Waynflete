@@ -1,7 +1,18 @@
 # Waynflete Algorithm Implementations
-## The Application of Mathematics in Analysing Algorithmic Efficiency by Isaac Eason
+## The Application of Mathematics in Analysing Algorithmic Efficiency
+### by Isaac Eason
 
-All of the programs from my Waynflete can be found on this GitHub page in the required folders. All of the programs are written in Python.
+In each section's folder, all the programs are listed for each algorithm. There are the following folders available:
+- Introduction
+  - InsertionSort
+  - MergeSort
+- Problem1
+  - InitalAlgorithm
+  - OptimisedAlgorithm
+- Problem2
+  - FirstAlgorithm
+  - SecondAlgorithm
+  - ThirdAlgorithm
 
 Each algorithm has a unique folder with two different programs:
 - **user.py**  
